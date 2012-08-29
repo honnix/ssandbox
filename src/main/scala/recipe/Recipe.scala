@@ -1,12 +1,4 @@
-abstract class Food(val name: String) {
-  override def toString = name
-}
-
-trait FoodCategories {
-  case class FoodCategory(name: String, foods: List[Food])
-
-  def allCategories: List[FoodCategory]
-}
+package recipe
 
 class Recipe(val name: String,
              val ingredients: List[Food],
@@ -14,9 +6,23 @@ class Recipe(val name: String,
   override def toString = name
 }
 
+abstract class Food(val name: String) {
+  override def toString = name
+}
+
+trait FoodCategories {
+
+  case class FoodCategory(name: String, foods: List[Food])
+
+  def allCategories: List[FoodCategory]
+}
+
 object Apple extends Food("Apple")
+
 object Orange extends Food("Orange")
+
 object Cream extends Food("Cream")
+
 object Sugar extends Food("Sugar")
 
 trait SimpleFoods {
