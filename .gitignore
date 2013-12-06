@@ -2,3 +2,4 @@ target/
 my_graph/
 .idea/
 .idea_modules/
+*.class

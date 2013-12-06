@@ -61,6 +61,7 @@ object Dependencies {
   val blueprints = "com.tinkerpop.blueprints" % "blueprints-neo4j-graph" % "2.1.0"
   val swing = "org.scala-lang" % "scala-swing" % "2.10.3"
   val reflect = "org.scala-lang" % "scala-reflect" % "2.10.3"
+  val async = "org.scala-lang.modules" %% "scala-async" % "0.9.0-M4"
 }
 
 object SsandboxBuild extends Build {
@@ -71,7 +72,8 @@ object SsandboxBuild extends Build {
   val commonDeps = Seq(
     blueprints,
     swing,
-    reflect
+    reflect,
+    async
   )
 
   lazy val RunDebug = config("debug").extend(Runtime)
